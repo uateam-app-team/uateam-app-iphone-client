@@ -409,4 +409,12 @@ NSString * rawContentsOfNode(xmlNode * node)
 	return rawContentsOfNode(_node);
 }
 
+-(NSString*)innerHTML{
+  NSMutableString *string = [NSMutableString string];
+  for (HTMLNode *_n in [self children]) {
+    [string appendString:[_n rawContents]];
+  }
+  return string;
+}
+
 @end

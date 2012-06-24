@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D283815972D5900F706D0 /* UATFreshRelease.m */; };
+		9E0D284215974CAA00F706D0 /* cartoon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283A15974CAA00F706D0 /* cartoon@2x.png */; };
+		9E0D284315974CAA00F706D0 /* cartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283B15974CAA00F706D0 /* cartoon.png */; };
+		9E0D284415974CAA00F706D0 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283C15974CAA00F706D0 /* movie.png */; };
+		9E0D284515974CAA00F706D0 /* movie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283D15974CAA00F706D0 /* movie@2x.png */; };
+		9E0D284615974CAA00F706D0 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283E15974CAA00F706D0 /* new.png */; };
+		9E0D284715974CAA00F706D0 /* new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283F15974CAA00F706D0 /* new@2x.png */; };
+		9E0D284815974CAA00F706D0 /* sitcom.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D284015974CAA00F706D0 /* sitcom.png */; };
+		9E0D284915974CAA00F706D0 /* sitcom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D284115974CAA00F706D0 /* sitcom@2x.png */; };
 		9EAF08EA1596EAD000196E9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF08E91596EAD000196E9B /* UIKit.framework */; };
 		9EAF08EC1596EAD000196E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF08EB1596EAD000196E9B /* Foundation.framework */; };
 		9EAF08EE1596EAD000196E9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF08ED1596EAD000196E9B /* CoreGraphics.framework */; };
 		9EAF08F41596EAD000196E9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF08F21596EAD000196E9B /* InfoPlist.strings */; };
 		9EAF08F61596EAD000196E9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF08F51596EAD000196E9B /* main.m */; };
 		9EAF08FD1596EAD000196E9B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF08FB1596EAD000196E9B /* MainStoryboard.storyboard */; };
-		9EDF76641596F036004995D0 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF76601596F036004995D0 /* first.png */; };
-		9EDF76651596F036004995D0 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF76611596F036004995D0 /* first@2x.png */; };
-		9EDF76661596F036004995D0 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF76621596F036004995D0 /* second.png */; };
-		9EDF76671596F036004995D0 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF76631596F036004995D0 /* second@2x.png */; };
 		9EDF766A1596F071004995D0 /* UATMovieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF76691596F071004995D0 /* UATMovieVC.m */; };
 		9EDF766B1596F092004995D0 /* UATNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF765D1596F022004995D0 /* UATNewVC.m */; };
 		9EDF766C1596F0A7004995D0 /* UATSitcomsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF765F1596F022004995D0 /* UATSitcomsVC.m */; };
@@ -40,6 +45,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0D283715972D5900F706D0 /* UATFreshRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATFreshRelease.h; path = Classes/Releases/UATFreshRelease.h; sourceTree = "<group>"; };
+		9E0D283815972D5900F706D0 /* UATFreshRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATFreshRelease.m; path = Classes/Releases/UATFreshRelease.m; sourceTree = "<group>"; };
+		9E0D283A15974CAA00F706D0 /* cartoon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cartoon@2x.png"; path = "Resources/cartoon@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E0D283B15974CAA00F706D0 /* cartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cartoon.png; path = Resources/cartoon.png; sourceTree = SOURCE_ROOT; };
+		9E0D283C15974CAA00F706D0 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = movie.png; path = Resources/movie.png; sourceTree = SOURCE_ROOT; };
+		9E0D283D15974CAA00F706D0 /* movie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "movie@2x.png"; path = "Resources/movie@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E0D283E15974CAA00F706D0 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = new.png; path = Resources/new.png; sourceTree = SOURCE_ROOT; };
+		9E0D283F15974CAA00F706D0 /* new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new@2x.png"; path = "Resources/new@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E0D284015974CAA00F706D0 /* sitcom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sitcom.png; path = Resources/sitcom.png; sourceTree = SOURCE_ROOT; };
+		9E0D284115974CAA00F706D0 /* sitcom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sitcom@2x.png"; path = "Resources/sitcom@2x.png"; sourceTree = SOURCE_ROOT; };
 		9EAF08E51596EAD000196E9B /* UATeamClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UATeamClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAF08E91596EAD000196E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EAF08EB1596EAD000196E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,10 +70,6 @@
 		9EDF765D1596F022004995D0 /* UATNewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UATNewVC.m; path = RootControlers/UATNewVC.m; sourceTree = "<group>"; };
 		9EDF765E1596F022004995D0 /* UATSitcomsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UATSitcomsVC.h; path = RootControlers/UATSitcomsVC.h; sourceTree = "<group>"; };
 		9EDF765F1596F022004995D0 /* UATSitcomsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UATSitcomsVC.m; path = RootControlers/UATSitcomsVC.m; sourceTree = "<group>"; };
-		9EDF76601596F036004995D0 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Resources/first.png; sourceTree = SOURCE_ROOT; };
-		9EDF76611596F036004995D0 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Resources/first@2x.png"; sourceTree = SOURCE_ROOT; };
-		9EDF76621596F036004995D0 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = Resources/second.png; sourceTree = SOURCE_ROOT; };
-		9EDF76631596F036004995D0 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "Resources/second@2x.png"; sourceTree = SOURCE_ROOT; };
 		9EDF76681596F071004995D0 /* UATMovieVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATMovieVC.h; path = RootControlers/UATMovieVC.h; sourceTree = "<group>"; };
 		9EDF76691596F071004995D0 /* UATMovieVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATMovieVC.m; path = RootControlers/UATMovieVC.m; sourceTree = "<group>"; };
 		9EDF766F1596F13B004995D0 /* UATCartoonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATCartoonsVC.h; path = RootControlers/UATCartoonsVC.h; sourceTree = "<group>"; };
@@ -110,6 +121,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0D283415972D0100F706D0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D283615972D0A00F706D0 /* Releases */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9E0D283615972D0A00F706D0 /* Releases */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D283715972D5900F706D0 /* UATFreshRelease.h */,
+				9E0D283815972D5900F706D0 /* UATFreshRelease.m */,
+			);
+			name = Releases;
+			sourceTree = "<group>";
+		};
 		9EAF08DA1596EAD000196E9B = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +170,7 @@
 		9EAF08EF1596EAD000196E9B /* UATeamClient */ = {
 			isa = PBXGroup;
 			children = (
+				9E0D283415972D0100F706D0 /* Classes */,
 				9EDF7672159702C2004995D0 /* Libraries */,
 				9EDF76561596EF0B004995D0 /* Application */,
 				9EDF76541596EEEF004995D0 /* RootControlers */,
@@ -189,10 +218,14 @@
 		9EDF76571596EF1F004995D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9EDF76601596F036004995D0 /* first.png */,
-				9EDF76611596F036004995D0 /* first@2x.png */,
-				9EDF76621596F036004995D0 /* second.png */,
-				9EDF76631596F036004995D0 /* second@2x.png */,
+				9E0D283A15974CAA00F706D0 /* cartoon@2x.png */,
+				9E0D283B15974CAA00F706D0 /* cartoon.png */,
+				9E0D283C15974CAA00F706D0 /* movie.png */,
+				9E0D283D15974CAA00F706D0 /* movie@2x.png */,
+				9E0D283E15974CAA00F706D0 /* new.png */,
+				9E0D283F15974CAA00F706D0 /* new@2x.png */,
+				9E0D284015974CAA00F706D0 /* sitcom.png */,
+				9E0D284115974CAA00F706D0 /* sitcom@2x.png */,
 			);
 			name = Resources;
 			path = UATeamClient;
@@ -304,10 +337,14 @@
 			files = (
 				9EAF08F41596EAD000196E9B /* InfoPlist.strings in Resources */,
 				9EAF08FD1596EAD000196E9B /* MainStoryboard.storyboard in Resources */,
-				9EDF76641596F036004995D0 /* first.png in Resources */,
-				9EDF76651596F036004995D0 /* first@2x.png in Resources */,
-				9EDF76661596F036004995D0 /* second.png in Resources */,
-				9EDF76671596F036004995D0 /* second@2x.png in Resources */,
+				9E0D284215974CAA00F706D0 /* cartoon@2x.png in Resources */,
+				9E0D284315974CAA00F706D0 /* cartoon.png in Resources */,
+				9E0D284415974CAA00F706D0 /* movie.png in Resources */,
+				9E0D284515974CAA00F706D0 /* movie@2x.png in Resources */,
+				9E0D284615974CAA00F706D0 /* new.png in Resources */,
+				9E0D284715974CAA00F706D0 /* new@2x.png in Resources */,
+				9E0D284815974CAA00F706D0 /* sitcom.png in Resources */,
+				9E0D284915974CAA00F706D0 /* sitcom@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +375,7 @@
 				9EDF769D159702C2004995D0 /* SBJsonTokeniser.m in Sources */,
 				9EDF769E159702C2004995D0 /* SBJsonUTF8Stream.m in Sources */,
 				9EDF769F159702C2004995D0 /* SBJsonWriter.m in Sources */,
+				9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

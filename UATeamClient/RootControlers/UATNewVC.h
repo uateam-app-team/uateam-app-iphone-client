@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UATNewVC : UIViewController
+@interface UATNewVC : UIViewController<UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate> {
+    
+    NSMutableArray *freshReleases;
+    
+    NSMutableArray *releaseImages;
+    
+    NSMutableArray *imagesData;
+    
+    IBOutlet UITableView *table;
+    
+    NSInteger loadedImages;
+    
+}
 
 @end

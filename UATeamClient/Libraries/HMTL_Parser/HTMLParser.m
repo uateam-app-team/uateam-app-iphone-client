@@ -116,14 +116,4 @@
 	
 	return self;
 }
-
-
--(void)dealloc
-{
-	if (_doc)
-	{
-		xmlFreeDoc(_doc);
-	}
-}
-
 @end
