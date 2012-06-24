@@ -36,6 +36,7 @@
 		9EDF769D159702C2004995D0 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF768D159702C2004995D0 /* SBJsonTokeniser.m */; };
 		9EDF769E159702C2004995D0 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF768F159702C2004995D0 /* SBJsonUTF8Stream.m */; };
 		9EDF769F159702C2004995D0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF7691159702C2004995D0 /* SBJsonWriter.m */; };
+		9EDF76A1159705D6004995D0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDF76A0159705D6004995D0 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		9EDF768F159702C2004995D0 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		9EDF7690159702C2004995D0 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		9EDF7691159702C2004995D0 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		9EDF76A0159705D6004995D0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EDF76A1159705D6004995D0 /* libxml2.dylib in Frameworks */,
 				9EAF08EA1596EAD000196E9B /* UIKit.framework in Frameworks */,
 				9EAF08EC1596EAD000196E9B /* Foundation.framework in Frameworks */,
 				9EAF08EE1596EAD000196E9B /* CoreGraphics.framework in Frameworks */,
@@ -128,6 +131,7 @@
 		9EAF08E81596EAD000196E9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EDF76A0159705D6004995D0 /* libxml2.dylib */,
 				9EAF08E91596EAD000196E9B /* UIKit.framework */,
 				9EAF08EB1596EAD000196E9B /* Foundation.framework */,
 				9EAF08ED1596EAD000196E9B /* CoreGraphics.framework */,
@@ -409,7 +413,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UATeamClient/UATeamClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = "UATeamClient/UATeamClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,7 +426,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UATeamClient/UATeamClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = "UATeamClient/UATeamClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
