@@ -7,6 +7,8 @@
 //
 
 #import "UATSitcomsVC.h"
+#import "HTMLParser.h"
+#import "UATOtherReleases.h"
 
 @interface UATSitcomsVC ()
 
@@ -14,10 +16,37 @@
 
 @implementation UATSitcomsVC
 
+- (void)loadReleases {
+    NSError *initError = nil;
+    NSURL *sitcoms = HOME_URL;
+    HTMLParser *freshParser = [[HTMLParser alloc] initWithContentsOfURL:sitcoms error:&initError];
+    if (initError) {
+        NSLog(@"%@",initError);
+    }
+    HTMLNode *tableNode;
+    NSArray *headersArr = [freshParser.body findChildTags:@"h3"];
+    for (HTMLNode *head in headersArr) {
+        if ([[head contents] isEqualToString:@"Багатосерійні"]) {
+            tableNode = [[head nextSibling] nextSibling];
+            break;
+        }
+    }
+    NSArray *tmpArray = [tableNode findChildTags:@"tr"];
+    NSInteger cnt = [tmpArray count];
+    sitcomReleases = [[NSMutableArray alloc] initWithCapacity:cnt];
+    UATOtherReleases *release;
+    for (HTMLNode *node in tmpArray) {
+        release = [[UATOtherReleases alloc] initWithHTMLNode:node];
+        [sitcomReleases addObject:release];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self loadReleases];
+    [table reloadData];
 }
 
 - (void)viewDidUnload
@@ -41,7 +70,7 @@
     NSInteger row = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ident];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
         cell.backgroundColor = [UIColor blackColor];
         cell.textLabel.textColor = [UIColor whiteColor];
     }
@@ -49,8 +78,7 @@
 //    if ([(im = [releaseImages objectAtIndex:row]) isKindOfClass:[UIImage class]]) {
 //        cell.imageView.image = im;
 //    }
-    cell.textLabel.text = [[sitcomReleases objectAtIndex:row] /*categoryAndChunk*/description];
-    cell.detailTextLabel.text = [[sitcomReleases objectAtIndex:row] title];
+    cell.textLabel.text = [[sitcomReleases objectAtIndex:row] title];
     return cell;
 }
 
