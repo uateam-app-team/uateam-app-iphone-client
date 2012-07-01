@@ -24,6 +24,7 @@
 		9EAF08F41596EAD000196E9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF08F21596EAD000196E9B /* InfoPlist.strings */; };
 		9EAF08F61596EAD000196E9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF08F51596EAD000196E9B /* main.m */; };
 		9EAF08FD1596EAD000196E9B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF08FB1596EAD000196E9B /* MainStoryboard.storyboard */; };
+		9EC0A21215A07D7B0086B12B /* UATReleaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC0A21115A07D7B0086B12B /* UATReleaseDescription.m */; };
 		9EDF766A1596F071004995D0 /* UATMovieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF76691596F071004995D0 /* UATMovieVC.m */; };
 		9EDF766B1596F092004995D0 /* UATNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF765D1596F022004995D0 /* UATNewVC.m */; };
 		9EDF766C1596F0A7004995D0 /* UATSitcomsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF765F1596F022004995D0 /* UATSitcomsVC.m */; };
@@ -70,6 +71,8 @@
 		9EAF08F51596EAD000196E9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EAF08F71596EAD000196E9B /* UATeamClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UATeamClient-Prefix.pch"; sourceTree = "<group>"; };
 		9EAF08FC1596EAD000196E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9EC0A21015A07D7B0086B12B /* UATReleaseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATReleaseDescription.h; path = Classes/Descriptions/UATReleaseDescription.h; sourceTree = "<group>"; };
+		9EC0A21115A07D7B0086B12B /* UATReleaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATReleaseDescription.m; path = Classes/Descriptions/UATReleaseDescription.m; sourceTree = "<group>"; };
 		9EDF765A1596F018004995D0 /* UATAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UATAppDelegate.h; path = Application/UATAppDelegate.h; sourceTree = "<group>"; };
 		9EDF765B1596F018004995D0 /* UATAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UATAppDelegate.m; path = Application/UATAppDelegate.m; sourceTree = "<group>"; };
 		9EDF765C1596F022004995D0 /* UATNewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UATNewVC.h; path = RootControlers/UATNewVC.h; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		9E0D283415972D0100F706D0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9EC0A20E15A07D460086B12B /* Descriptions */,
 				9E0D283615972D0A00F706D0 /* Releases */,
 			);
 			name = Classes;
@@ -198,6 +202,15 @@
 				9EAF08F71596EAD000196E9B /* UATeamClient-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EC0A20E15A07D460086B12B /* Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				9EC0A21015A07D7B0086B12B /* UATReleaseDescription.h */,
+				9EC0A21115A07D7B0086B12B /* UATReleaseDescription.m */,
+			);
+			name = Descriptions;
 			sourceTree = "<group>";
 		};
 		9EDF76541596EEEF004995D0 /* RootControlers */ = {
@@ -388,6 +401,7 @@
 				9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */,
 				9E54B30815A040B70025238C /* UATOtherReleases.m in Sources */,
 				9E54B30B15A0464A0025238C /* UATAbstractRelease.m in Sources */,
+				9EC0A21215A07D7B0086B12B /* UATReleaseDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
