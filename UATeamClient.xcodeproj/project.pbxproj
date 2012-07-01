@@ -16,6 +16,8 @@
 		9E0D284715974CAA00F706D0 /* new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283F15974CAA00F706D0 /* new@2x.png */; };
 		9E0D284815974CAA00F706D0 /* sitcom.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D284015974CAA00F706D0 /* sitcom.png */; };
 		9E0D284915974CAA00F706D0 /* sitcom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D284115974CAA00F706D0 /* sitcom@2x.png */; };
+		9E54B30815A040B70025238C /* UATOtherReleases.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B30715A040B70025238C /* UATOtherReleases.m */; };
+		9E54B30B15A0464A0025238C /* UATAbstractRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B30A15A0464A0025238C /* UATAbstractRelease.m */; };
 		9EAF08EA1596EAD000196E9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF08E91596EAD000196E9B /* UIKit.framework */; };
 		9EAF08EC1596EAD000196E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF08EB1596EAD000196E9B /* Foundation.framework */; };
 		9EAF08EE1596EAD000196E9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF08ED1596EAD000196E9B /* CoreGraphics.framework */; };
@@ -55,6 +57,10 @@
 		9E0D283F15974CAA00F706D0 /* new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new@2x.png"; path = "Resources/new@2x.png"; sourceTree = SOURCE_ROOT; };
 		9E0D284015974CAA00F706D0 /* sitcom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sitcom.png; path = Resources/sitcom.png; sourceTree = SOURCE_ROOT; };
 		9E0D284115974CAA00F706D0 /* sitcom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sitcom@2x.png"; path = "Resources/sitcom@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E54B30615A040B70025238C /* UATOtherReleases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATOtherReleases.h; path = Classes/Releases/UATOtherReleases.h; sourceTree = "<group>"; };
+		9E54B30715A040B70025238C /* UATOtherReleases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATOtherReleases.m; path = Classes/Releases/UATOtherReleases.m; sourceTree = "<group>"; };
+		9E54B30915A0464A0025238C /* UATAbstractRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATAbstractRelease.h; path = Classes/Releases/UATAbstractRelease.h; sourceTree = "<group>"; };
+		9E54B30A15A0464A0025238C /* UATAbstractRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATAbstractRelease.m; path = Classes/Releases/UATAbstractRelease.m; sourceTree = "<group>"; };
 		9EAF08E51596EAD000196E9B /* UATeamClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UATeamClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAF08E91596EAD000196E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EAF08EB1596EAD000196E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +140,10 @@
 			children = (
 				9E0D283715972D5900F706D0 /* UATFreshRelease.h */,
 				9E0D283815972D5900F706D0 /* UATFreshRelease.m */,
+				9E54B30615A040B70025238C /* UATOtherReleases.h */,
+				9E54B30715A040B70025238C /* UATOtherReleases.m */,
+				9E54B30915A0464A0025238C /* UATAbstractRelease.h */,
+				9E54B30A15A0464A0025238C /* UATAbstractRelease.m */,
 			);
 			name = Releases;
 			sourceTree = "<group>";
@@ -376,6 +386,8 @@
 				9EDF769E159702C2004995D0 /* SBJsonUTF8Stream.m in Sources */,
 				9EDF769F159702C2004995D0 /* SBJsonWriter.m in Sources */,
 				9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */,
+				9E54B30815A040B70025238C /* UATOtherReleases.m in Sources */,
+				9E54B30B15A0464A0025238C /* UATAbstractRelease.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +467,7 @@
 				INFOPLIST_FILE = "UATeamClient/UATeamClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -468,6 +481,7 @@
 				INFOPLIST_FILE = "UATeamClient/UATeamClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

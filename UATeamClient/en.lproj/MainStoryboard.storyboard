@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="bmD-MN-gGb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="bmD-MN-gGb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,9 +43,23 @@
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="DRF-np-oEg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3" id="sR1-ls-1J3"/>
+                                    <outlet property="delegate" destination="3" id="bLa-Cn-BOE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sitcoms" image="sitcom" id="6"/>
+                    <connections>
+                        <outlet property="table" destination="DRF-np-oEg" id="tOb-Us-hcI"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
@@ -58,9 +72,23 @@
                     <view key="view" contentMode="scaleToFill" id="Uek-34-3dW">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="T3A-B7-WxR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RKR-Pu-6Qg" id="Qub-e0-W5M"/>
+                                    <outlet property="delegate" destination="RKR-Pu-6Qg" id="brO-KY-i76"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cartoons" image="cartoon" id="Zr0-dz-s8M"/>
+                    <connections>
+                        <outlet property="table" destination="T3A-B7-WxR" id="AHb-PR-5lf"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1077" y="494"/>
@@ -73,9 +101,23 @@
                     <view key="view" contentMode="scaleToFill" id="a8E-by-vzN">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="qAD-EY-iP9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="09G-4X-8QP" id="Vtx-XL-pSm"/>
+                                    <outlet property="delegate" destination="09G-4X-8QP" id="f1T-Zv-ERk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="movie" id="RJj-JS-RwB"/>
+                    <connections>
+                        <outlet property="table" destination="qAD-EY-iP9" id="DIg-ax-kYL"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1051" y="-138"/>
@@ -111,9 +153,15 @@
     <classes>
         <class className="UATCartoonsVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UATCartoonsVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="UATMovieVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UATMovieVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="UATNewVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UATNewVC.h"/>
@@ -123,6 +171,9 @@
         </class>
         <class className="UATSitcomsVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UATSitcomsVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

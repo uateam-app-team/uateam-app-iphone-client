@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UATMovieVC : UIViewController
+@interface UATMovieVC : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    
+    NSMutableArray *movieReleases;
+    
+    IBOutlet UITableView *table;
+    
+}
 
 @end

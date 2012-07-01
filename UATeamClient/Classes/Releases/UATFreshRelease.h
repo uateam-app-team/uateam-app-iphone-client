@@ -7,20 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@class HTMLNode;
+#import "UATAbstractRelease.h"
 
-@interface UATFreshRelease : NSObject {
+@interface UATFreshRelease : UATAbstractRelease {
     
 }
-
--(id)initWithHTMLNode:(HTMLNode *)node;
-
-@property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, strong) NSString *categoryAndChunk;
 
 @property (nonatomic, strong) NSString *imgPath;
-
-@property (nonatomic, strong) NSString *detailsLink;
 
 @end

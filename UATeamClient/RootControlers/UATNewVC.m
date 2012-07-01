@@ -16,10 +16,7 @@
 
 @implementation UATNewVC
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)loadReleases {
     NSError *initError = nil;
     NSURL *home = HOME_URL;
     HTMLParser *freshParser = [[HTMLParser alloc] initWithContentsOfURL:home error:&initError];
@@ -43,6 +40,13 @@
         [tmpConnection start];
         [freshReleases addObject:release];
     }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    [self loadReleases];
     [table reloadData];
 }
 

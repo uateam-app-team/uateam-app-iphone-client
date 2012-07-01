@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UATSitcomsVC : UIViewController
+@interface UATSitcomsVC : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    
+    NSMutableArray *sitcomReleases;
+    
+    IBOutlet UITableView *table;
+    
+}
 
 @end
