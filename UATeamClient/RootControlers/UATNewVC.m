@@ -98,8 +98,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
     if (nil == cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ident];
-        cell.backgroundColor = [UIColor blackColor];
         cell.textLabel.textColor = [UIColor whiteColor];
+        cell.autoresizesSubviews = YES;
+        cell.contentView.autoresizesSubviews = YES;
     }
     id im;
     if ([(im = [releaseImages objectAtIndex:row]) isKindOfClass:[UIImage class]]) {

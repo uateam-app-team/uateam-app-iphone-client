@@ -17,7 +17,7 @@
     if (self) {
         NSString *category = [[node findChildTag:@"span"] allContents];
         NSString *part = [[node findChildTag:@"div"] allContents];
-        self.categoryAndChunk = [NSString stringWithFormat:@"%@\t%@",category,part];
+        self.categoryAndChunk = [NSString stringWithFormat:@"%@    %@",category,part];
         self.title = [[node findChildOfClass:@"torrent_title"] allContents];
         self.imgPath = [(HTMLNode *)[node findChildOfClass:@"category_icon"] getAttributeNamed:@"src"];
         NSArray *refArray = [node findChildTags:@"a"];
