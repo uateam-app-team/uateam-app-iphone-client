@@ -47,8 +47,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self loadReleases];
-    [table reloadData];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    [self startAnimatingActivityView];
+    dispatch_async(queue, ^{
+        [self loadReleases];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [table reloadData];
+            [self stopAnimatingActivityView];
+        });
+    });
 }
 
 - (void)viewDidUnload

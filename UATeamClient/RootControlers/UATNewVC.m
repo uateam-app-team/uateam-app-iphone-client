@@ -46,7 +46,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self startAnimatingActivityView];
     [self loadReleases];
+    [self stopAnimatingActivityView];
     [table reloadData];
 }
 
@@ -59,6 +61,7 @@
 #pragma mark - URL loading routine
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"%@",error);
     NSInteger index = [releaseImages indexOfObject:connection];
     ++loadedImages;
     [releaseImages replaceObjectAtIndex:index withObject:[NSNull null]];
