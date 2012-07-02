@@ -34,10 +34,12 @@
         release = [[UATFreshRelease alloc] initWithHTMLNode:node];
         NSURL *tmpURL = [NSURL URLWithString:release.imgPath relativeToURL:HOME_URL];
         NSURLRequest *tmpRequest = [NSURLRequest requestWithURL:tmpURL];
-        NSURLConnection *tmpConnection = [NSURLConnection connectionWithRequest:tmpRequest delegate:self];
-        [imagesData addObject:[[NSMutableData alloc] init]];
-        [releaseImages addObject:tmpConnection];
-        [tmpConnection start];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSURLConnection *tmpConnection = [NSURLConnection connectionWithRequest:tmpRequest delegate:self];
+            [imagesData addObject:[[NSMutableData alloc] init]];
+            [releaseImages addObject:tmpConnection];
+            [tmpConnection start];
+        });
         [freshReleases addObject:release];
     }
 }
@@ -46,10 +48,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self startAnimatingActivityView];
+    /*[self startAnimatingActivityView];
     [self loadReleases];
     [self stopAnimatingActivityView];
-    [table reloadData];
+    [table reloadData];*/
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    [self startAnimatingActivityView];
+    dispatch_async(queue, ^{
+        [self loadReleases];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [table reloadData];
+            [self stopAnimatingActivityView];
+        });
+    });
 }
 
 - (void)viewDidUnload
