@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UATViewController.h"
 
-@interface UATCartoonsVC : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface UATCartoonsVC : UATViewController <UITableViewDelegate, UITableViewDataSource> {
     
     NSMutableArray *cartoonReleases;
     

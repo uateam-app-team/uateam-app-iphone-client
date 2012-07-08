@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D7C1B215A1B06100010CFE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D7C1B115A1B06100010CFE /* MBProgressHUD.m */; };
+		01D7C1B715A1B13900010CFE /* UATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D7C1B615A1B13900010CFE /* UATViewController.m */; };
 		9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D283815972D5900F706D0 /* UATFreshRelease.m */; };
 		9E0D284215974CAA00F706D0 /* cartoon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283A15974CAA00F706D0 /* cartoon@2x.png */; };
 		9E0D284315974CAA00F706D0 /* cartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283B15974CAA00F706D0 /* cartoon.png */; };
@@ -48,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D7C1B015A1B06100010CFE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		01D7C1B115A1B06100010CFE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		01D7C1B515A1B13900010CFE /* UATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATViewController.h; path = Classes/General/UATViewController.h; sourceTree = "<group>"; };
+		01D7C1B615A1B13900010CFE /* UATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATViewController.m; path = Classes/General/UATViewController.m; sourceTree = "<group>"; };
 		9E0D283715972D5900F706D0 /* UATFreshRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATFreshRelease.h; path = Classes/Releases/UATFreshRelease.h; sourceTree = "<group>"; };
 		9E0D283815972D5900F706D0 /* UATFreshRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATFreshRelease.m; path = Classes/Releases/UATFreshRelease.m; sourceTree = "<group>"; };
 		9E0D283A15974CAA00F706D0 /* cartoon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cartoon@2x.png"; path = "Resources/cartoon@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -130,10 +136,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01D7C1AF15A1B06100010CFE /* MBProgress */ = {
+			isa = PBXGroup;
+			children = (
+				01D7C1B015A1B06100010CFE /* MBProgressHUD.h */,
+				01D7C1B115A1B06100010CFE /* MBProgressHUD.m */,
+			);
+			path = MBProgress;
+			sourceTree = "<group>";
+		};
+		01D7C1B415A1B10300010CFE /* General */ = {
+			isa = PBXGroup;
+			children = (
+				01D7C1B515A1B13900010CFE /* UATViewController.h */,
+				01D7C1B615A1B13900010CFE /* UATViewController.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
 		9E0D283415972D0100F706D0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				9EC0A20E15A07D460086B12B /* Descriptions */,
+				01D7C1B415A1B10300010CFE /* General */,
 				9E0D283615972D0A00F706D0 /* Releases */,
 			);
 			name = Classes;
@@ -257,6 +282,7 @@
 		9EDF7672159702C2004995D0 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				01D7C1AF15A1B06100010CFE /* MBProgress */,
 				9EDF7673159702C2004995D0 /* HMTL_Parser */,
 				9EDF7678159702C2004995D0 /* SBJson */,
 			);
@@ -402,6 +428,8 @@
 				9E54B30815A040B70025238C /* UATOtherReleases.m in Sources */,
 				9E54B30B15A0464A0025238C /* UATAbstractRelease.m in Sources */,
 				9EC0A21215A07D7B0086B12B /* UATReleaseDescription.m in Sources */,
+				01D7C1B215A1B06100010CFE /* MBProgressHUD.m in Sources */,
+				01D7C1B715A1B13900010CFE /* UATViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

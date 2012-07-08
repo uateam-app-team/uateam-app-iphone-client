@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UATViewController.h"
 
-@interface UATNewVC : UIViewController<UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate> {
+@interface UATNewVC : UATViewController<UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate> {
     
     NSMutableArray *freshReleases;
     
