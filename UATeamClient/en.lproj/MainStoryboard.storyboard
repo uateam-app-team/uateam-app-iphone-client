@@ -6,6 +6,26 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller - New releases-->
+        <scene sceneID="oiy-iZ-9AR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QnL-Ov-8R8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="YTc-SE-nga" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New releases" image="new" id="lIB-6a-RAt"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="CuT-aj-22w">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xvs-Ad-ZYB">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="jLy-7F-jwe"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="671" y="-742"/>
+        </scene>
         <!--NewVC - NewReleases-->
         <scene sceneID="11">
             <objects>
@@ -27,13 +47,29 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New releases" image="new" id="7"/>
+                    <navigationItem key="navigationItem" id="9Ou-kg-3l5"/>
                     <connections>
                         <outlet property="table" destination="bmD-MN-gGb" id="bqS-nn-zZK"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="1161" y="-742"/>
+        </scene>
+        <!--Navigation Controller - Sitcoms-->
+        <scene sceneID="Lg1-Ca-hmr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DW2-p7-93Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="wjh-N7-Qqp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sitcoms" image="sitcom" id="qVm-Qe-9aX"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="url-oH-zH5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="eJF-km-PKH"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="671" y="1130"/>
         </scene>
         <!--SitcomsVC - Sitcoms-->
         <scene sceneID="13">
@@ -57,12 +93,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sitcoms" image="sitcom" id="6"/>
+                    <navigationItem key="navigationItem" id="cto-Ou-JU9"/>
                     <connections>
                         <outlet property="table" destination="DRF-np-oEg" id="tOb-Us-hcI"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="1161" y="1130"/>
         </scene>
         <!--CartoonsVC - Cartoons-->
         <scene sceneID="G2E-ih-w5O">
@@ -86,12 +123,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cartoons" image="cartoon" id="Zr0-dz-s8M"/>
+                    <navigationItem key="navigationItem" id="tEk-qO-aH6"/>
                     <connections>
                         <outlet property="table" destination="T3A-B7-WxR" id="AHb-PR-5lf"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1077" y="494"/>
+            <point key="canvasLocation" x="1161" y="494"/>
         </scene>
         <!--MovieVC - Movies-->
         <scene sceneID="dNu-G0-sAC">
@@ -114,13 +152,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Movies" image="movie" id="RJj-JS-RwB"/>
+                    <navigationItem key="navigationItem" id="pxa-LC-ZNV"/>
                     <connections>
                         <outlet property="table" destination="qAD-EY-iP9" id="DIg-ax-kYL"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1051" y="-138"/>
+            <point key="canvasLocation" x="1161" y="-146"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -134,14 +172,46 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="09G-4X-8QP" kind="relationship" relationship="viewControllers" id="USy-IJ-itv"/>
-                        <segue destination="RKR-Pu-6Qg" kind="relationship" relationship="viewControllers" id="8wi-qo-vPv"/>
+                        <segue destination="YTc-SE-nga" kind="relationship" relationship="viewControllers" id="StA-qY-2hl"/>
+                        <segue destination="wjh-N7-Qqp" kind="relationship" relationship="viewControllers" id="sUG-TW-Rgo"/>
+                        <segue destination="pAU-S6-rHw" kind="relationship" relationship="viewControllers" id="v0N-y3-Ebn"/>
+                        <segue destination="KI6-Iv-nGY" kind="relationship" relationship="viewControllers" id="Qa6-2U-r6h"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="8" y="188"/>
+        </scene>
+        <!--Navigation Controller - Movies-->
+        <scene sceneID="4SK-xd-tEY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIz-IF-xYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="pAU-S6-rHw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="movie" id="eMW-Tq-OCJ"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sgI-Ht-3Tn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="09G-4X-8QP" kind="relationship" relationship="rootViewController" id="yl4-vo-eKw"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="671" y="-146"/>
+        </scene>
+        <!--Navigation Controller - Cartoons-->
+        <scene sceneID="fwW-2d-Mzl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHt-Sg-49a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="KI6-Iv-nGY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cartoons" image="cartoon" id="Sdz-vS-qBW"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4s1-Fg-GYw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RKR-Pu-6Qg" kind="relationship" relationship="rootViewController" id="a4w-Ho-sOn"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="671" y="494"/>
         </scene>
     </scenes>
     <resources>
