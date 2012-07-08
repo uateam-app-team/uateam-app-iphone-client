@@ -41,6 +41,11 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -77,11 +82,6 @@
     static NSString *ident = @"freshCell";
     NSInteger row = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
-    if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
-        cell.backgroundColor = [UIColor blackColor];
-        cell.textLabel.textColor = [UIColor whiteColor];
-    }
 //    id im;
 //    if ([(im = [releaseImages objectAtIndex:row]) isKindOfClass:[UIImage class]]) {
 //        cell.imageView.image = im;

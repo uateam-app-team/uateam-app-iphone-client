@@ -9,6 +9,7 @@
 #import "UATMovieVC.h"
 #import "HTMLParser.h"
 #import "UATOtherReleases.h"
+#import "UATReleaseInfoVC.h"
 
 @interface UATMovieVC ()
 
@@ -58,6 +59,11 @@
     });
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -78,11 +84,6 @@
     static NSString *ident = @"movieCell";
     NSInteger row = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
-    if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
-        cell.backgroundColor = [UIColor blackColor];
-        cell.textLabel.textColor = [UIColor whiteColor];
-    }
 //    id im;
 //    if ([(im = [releaseImages objectAtIndex:row]) isKindOfClass:[UIImage class]]) {
 //        cell.imageView.image = im;
@@ -90,6 +91,18 @@
     //cell.textLabel.text = [[movieReleases objectAtIndex:row] description];
     cell.textLabel.text = [[movieReleases objectAtIndex:row] title];
     return cell;
+}
+
+#pragma mark Segue prep
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"releaseInfo"]) {
+        NSInteger selectedRowIndex = [table indexPathForSelectedRow].row;
+        UATReleaseInfoVC *releaseVC = [segue destinationViewController];
+        releaseVC.detailsURL = [[movieReleases objectAtIndex:selectedRowIndex] detailsLink];
+        //        DetailViewController *detailViewController = [segue destinationViewController];
+        //        detailViewController.play = [dataController objectInListAtIndex:selectedRowIndex.row];
+    }
 }
 
 #pragma mark

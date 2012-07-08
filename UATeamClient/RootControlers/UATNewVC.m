@@ -9,6 +9,7 @@
 #import "UATNewVC.h"
 #import "HTMLParser.h"
 #import "UATFreshRelease.h"
+#import "UATReleaseInfoVC.h"
 
 @interface UATNewVC ()
 
@@ -63,6 +64,11 @@
     });
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -110,12 +116,6 @@
     static NSString *ident = @"freshCell";
     NSInteger row = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident];
-    if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ident];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.autoresizesSubviews = YES;
-        cell.contentView.autoresizesSubviews = YES;
-    }
     id im;
     if ([(im = [releaseImages objectAtIndex:row]) isKindOfClass:[UIImage class]]) {
         cell.imageView.image = im;
@@ -123,6 +123,16 @@
     cell.textLabel.text = [[freshReleases objectAtIndex:row] categoryAndChunk];
     cell.detailTextLabel.text = [[freshReleases objectAtIndex:row] title];
     return cell;
+}
+
+#pragma mark Segue prep
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"releaseInfo"]) {
+        NSInteger selectedRowIndex = [table indexPathForSelectedRow].row;
+        UATReleaseInfoVC *releaseVC = [segue destinationViewController];
+        releaseVC.detailsURL = [[freshReleases objectAtIndex:selectedRowIndex] detailsLink];
+    }
 }
 
 #pragma mark

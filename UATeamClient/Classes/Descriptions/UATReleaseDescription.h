@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HTMLNode;
 
 @interface UATReleaseDescription : NSObject
+
+-(id)initWithHTMLNode:(HTMLNode *)node;
 
 @property (nonatomic, strong) NSString *description;
 
@@ -25,5 +28,7 @@
 @property (nonatomic, strong) NSString *cast;
 
 @property (nonatomic, strong) NSString *imageSrc;
+
+@property (nonatomic, strong) NSString *releaseDate;
 
 @end
