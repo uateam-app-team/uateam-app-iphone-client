@@ -9,6 +9,7 @@
 #import "UATSitcomsVC.h"
 #import "HTMLParser.h"
 #import "UATOtherReleases.h"
+#import "UATSitcomInfo.h"
 
 @interface UATSitcomsVC ()
 
@@ -88,6 +89,16 @@
 //    }
     cell.textLabel.text = [[sitcomReleases objectAtIndex:row] title];
     return cell;
+}
+
+#pragma mark Segue prep
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"sitcomInfo"]) {
+        NSInteger selectedRowIndex = [table indexPathForSelectedRow].row;
+        UATSitcomInfo *releaseVC = [segue destinationViewController];
+        releaseVC.detailsURL = [[sitcomReleases objectAtIndex:selectedRowIndex] detailsLink];
+    }
 }
 
 #pragma mark
