@@ -24,7 +24,11 @@
     
     NSMutableData *imageData;
     
+    NSString *videoUrl;
+    
 }
+
+-(IBAction)buttonPressed:(id)sender;
 
 @property (nonatomic, strong) NSString *detailsURL;
 

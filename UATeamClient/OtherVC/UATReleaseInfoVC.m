@@ -9,6 +9,7 @@
 #import "UATReleaseInfoVC.h"
 #import "HTMLParser.h"
 #import "UATReleaseDescription.h"
+#import "UATStreamingVC.h"
 
 @interface UATReleaseInfoVC ()
 
@@ -27,7 +28,7 @@
     NSArray *pArray = [freshParser.body findChildTags:@"p"];
     HTMLNode *infoNode = nil;
     for (HTMLNode *pNode in pArray) {
-        NSLog(@"%@",[pNode allContents]);
+        //NSLog(@"%@",[pNode allContents]);
         if ([[pNode allContents] rangeOfString:@"Дата виходу:"].location != NSNotFound) {
             infoNode = pNode;
             break;
@@ -36,7 +37,7 @@
     if (!infoNode) {
         NSArray *pArray = [freshParser.body findChildTags:@"div"];
         for (HTMLNode *divNode in pArray) {
-            NSLog(@"%@",[divNode allContents]);
+            //NSLog(@"%@",[divNode allContents]);
             if ([[divNode allContents] rangeOfString:@"Дата виходу:"].location != NSNotFound) {
                 infoNode = divNode;
                 break;
@@ -49,7 +50,25 @@
     HTMLNode *imgNode = [freshParser.body findChildOfClass:@"modal"];
     relDescription.imageSrc = [imgNode getAttributeNamed:@"href"];
     NSURL *imURL = [NSURL URLWithString:relDescription.imageSrc];
-    NSURLRequest *tmpRequest = [NSURLRequest requestWithURL:imURL];
+    NSURLRequest *tmpRequest = [NSURLRequest requestWithURL:imURL];HTMLNode *videoNode = [freshParser.body findChildWithAttribute:@"id" matchingName:@"online_code" allowPartial:NO];
+    videoNode = [videoNode findChildWithAttribute:@"name" matchingName:@"flashvars" allowPartial:NO];
+    NSString *tmpUrl = [videoNode getAttributeNamed:@"value"];
+    if (tmpUrl) {
+        NSError *error = NULL;
+        NSRegularExpression *regex = [NSRegularExpression
+                                      regularExpressionWithPattern:@".*file\\=((http|https|ftp)\\://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}/[a-zA-Z0-9\\-\\._/\\\\]+\\.mp4).*"
+                                      options:NSRegularExpressionCaseInsensitive
+                                      error:&error];
+        if (error) {
+            NSLog(@"%@",error);
+        }
+        NSArray *matches = [regex matchesInString:tmpUrl options:0 range:NSMakeRange(0, [tmpUrl length])];
+        for (NSTextCheckingResult *match in matches) {
+            NSRange firstHalfRange = [match rangeAtIndex:1];
+            videoUrl = [tmpUrl substringWithRange:firstHalfRange];
+        }
+        //videoUrl = @"http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1211/sample_iTunes.mov";
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         NSURLConnection *tmpConnection = [NSURLConnection connectionWithRequest:tmpRequest delegate:self];
         [tmpConnection start];
@@ -159,11 +178,17 @@
     releaseImage.image = coverImage;
 }
 
-#pragma mark
+#pragma mark -
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+-(IBAction)buttonPressed:(id)sender {
+    NSURL *_videoURL = [NSURL URLWithString:videoUrl];
+    UATStreamingVC *streamer = [[UATStreamingVC alloc] initWithContentURL:_videoURL];
+    [self.navigationController pushViewController:streamer animated:YES];
 }
 
 @end
