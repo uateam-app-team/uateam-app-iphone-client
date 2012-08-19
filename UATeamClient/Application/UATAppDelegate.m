@@ -14,7 +14,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[UIApplication sharedApplication]
+     registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeAlert |
+      UIRemoteNotificationTypeBadge |
+      UIRemoteNotificationTypeSound)];
+    NSDictionary *dict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (dict) {
+    }
     return YES;
 }
 							
@@ -44,5 +51,33 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - Push notification
+
+#if !TARGET_IPHONE_SIMULATOR
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    //NSString *str = [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding];
+    NSMutableCharacterSet *trimSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    [trimSet addCharactersInString:@"<>"];
+    NSString *str = [[[[NSString stringWithFormat:@"%@",deviceToken] stringByTrimmingCharactersInSet:trimSet] stringByReplacingOccurrencesOfString:@" " withString:@""] uppercaseString];
+    NSLog(@"device token: %@",str);
+    MSGSystem *system = [MSGSystem sharedSystem];
+    system.deviceToken = str;
+    MSGUser *user = [MSGUser sharedUser];
+    if (user.waitingForToken) {
+        [user login];
+    }
+}
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error",@"Alert title") message:@"Could not login to APN server. Push notifications will not be delivered" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+}
+#endif
+
 
 @end
