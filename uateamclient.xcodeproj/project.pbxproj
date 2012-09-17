@@ -84,14 +84,14 @@
 		9E9CE22015AB5A8400B02E36 /* UATSitcomDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATSitcomDescription.m; path = Classes/Descriptions/UATSitcomDescription.m; sourceTree = "<group>"; };
 		9E9CE22315AB5E1300B02E36 /* UATSitcomSeason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATSitcomSeason.h; path = Classes/Descriptions/UATSitcomSeason.h; sourceTree = "<group>"; };
 		9E9CE22415AB5E1300B02E36 /* UATSitcomSeason.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATSitcomSeason.m; path = Classes/Descriptions/UATSitcomSeason.m; sourceTree = "<group>"; };
-		9EAF08E51596EAD000196E9B /* UATeamClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UATeamClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EAF08E51596EAD000196E9B /* uateamclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uateamclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAF08E91596EAD000196E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EAF08EB1596EAD000196E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9EAF08ED1596EAD000196E9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9EAF08F11596EAD000196E9B /* UATeamClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UATeamClient-Info.plist"; sourceTree = "<group>"; };
+		9EAF08F11596EAD000196E9B /* uateamclient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "uateamclient-Info.plist"; sourceTree = "<group>"; };
 		9EAF08F31596EAD000196E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9EAF08F51596EAD000196E9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9EAF08F71596EAD000196E9B /* UATeamClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UATeamClient-Prefix.pch"; sourceTree = "<group>"; };
+		9EAF08F71596EAD000196E9B /* uateamclient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uateamclient-Prefix.pch"; sourceTree = "<group>"; };
 		9EAF08FC1596EAD000196E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9EC0A21015A07D7B0086B12B /* UATReleaseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATReleaseDescription.h; path = Classes/Descriptions/UATReleaseDescription.h; sourceTree = "<group>"; };
 		9EC0A21115A07D7B0086B12B /* UATReleaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATReleaseDescription.m; path = Classes/Descriptions/UATReleaseDescription.m; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		9EAF08E61596EAD000196E9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9EAF08E51596EAD000196E9B /* UATeamClient.app */,
+				9EAF08E51596EAD000196E9B /* uateamclient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,10 +257,10 @@
 		9EAF08F01596EAD000196E9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9EAF08F11596EAD000196E9B /* UATeamClient-Info.plist */,
+				9EAF08F11596EAD000196E9B /* uateamclient-Info.plist */,
 				9EAF08F21596EAD000196E9B /* InfoPlist.strings */,
 				9EAF08F51596EAD000196E9B /* main.m */,
-				9EAF08F71596EAD000196E9B /* UATeamClient-Prefix.pch */,
+				9EAF08F71596EAD000196E9B /* uateamclient-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -384,9 +384,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9EAF08E41596EAD000196E9B /* UATeamClient */ = {
+		9EAF08E41596EAD000196E9B /* uateamclient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EAF090E1596EAD000196E9B /* Build configuration list for PBXNativeTarget "UATeamClient" */;
+			buildConfigurationList = 9EAF090E1596EAD000196E9B /* Build configuration list for PBXNativeTarget "uateamclient" */;
 			buildPhases = (
 				9EAF08E11596EAD000196E9B /* Sources */,
 				9EAF08E21596EAD000196E9B /* Frameworks */,
@@ -396,9 +396,9 @@
 			);
 			dependencies = (
 			);
-			name = UATeamClient;
+			name = uateamclient;
 			productName = UATeamClient;
-			productReference = 9EAF08E51596EAD000196E9B /* UATeamClient.app */;
+			productReference = 9EAF08E51596EAD000196E9B /* uateamclient.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -411,7 +411,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "uateam-app";
 			};
-			buildConfigurationList = 9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "UATeamClient" */;
+			buildConfigurationList = 9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "uateamclient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -423,7 +423,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9EAF08E41596EAD000196E9B /* UATeamClient */,
+				9EAF08E41596EAD000196E9B /* uateamclient */,
 			);
 		};
 /* End PBXProject section */
@@ -558,11 +558,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UATeamClient/UATeamClient-Prefix.pch";
+				GCC_PREFIX_HEADER = "UATeamClient/uateamclient-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
-				INFOPLIST_FILE = "UATeamClient/UATeamClient-Info.plist";
+				INFOPLIST_FILE = "UATeamClient/uateamclient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = uateamclient;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -572,11 +572,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UATeamClient/UATeamClient-Prefix.pch";
+				GCC_PREFIX_HEADER = "UATeamClient/uateamclient-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
-				INFOPLIST_FILE = "UATeamClient/UATeamClient-Info.plist";
+				INFOPLIST_FILE = "UATeamClient/uateamclient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = uateamclient;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,7 +585,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "UATeamClient" */ = {
+		9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "uateamclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EAF090C1596EAD000196E9B /* Debug */,
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EAF090E1596EAD000196E9B /* Build configuration list for PBXNativeTarget "UATeamClient" */ = {
+		9EAF090E1596EAD000196E9B /* Build configuration list for PBXNativeTarget "uateamclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EAF090F1596EAD000196E9B /* Debug */,

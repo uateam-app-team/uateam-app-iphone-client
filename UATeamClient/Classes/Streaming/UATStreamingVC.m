@@ -45,7 +45,7 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)viewDidUnload
+- (void)viewDidUnload   
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -60,6 +60,7 @@
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {
     NSError *error = [[notification userInfo] objectForKey:@"error"];
+    NSLog(@"%@",error);
     if (error) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"Could not load video because of %@\nWould you like to try other app?",[error localizedDescription]] delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Open", nil] show];
     }

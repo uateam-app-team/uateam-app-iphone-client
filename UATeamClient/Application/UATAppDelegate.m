@@ -61,12 +61,6 @@
     [trimSet addCharactersInString:@"<>"];
     NSString *str = [[[[NSString stringWithFormat:@"%@",deviceToken] stringByTrimmingCharactersInSet:trimSet] stringByReplacingOccurrencesOfString:@" " withString:@""] uppercaseString];
     NSLog(@"device token: %@",str);
-    MSGSystem *system = [MSGSystem sharedSystem];
-    system.deviceToken = str;
-    MSGUser *user = [MSGUser sharedUser];
-    if (user.waitingForToken) {
-        [user login];
-    }
 }
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
