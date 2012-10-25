@@ -2,9 +2,23 @@
 //  UATReleaseInfoVC.m
 //  UATeamClient
 //
-//  Created by Andrii Titov on 7/8/12.
-//  Copyright (c) 2012 uateam-app. All rights reserved.
+//    This file is part of UATeamClient.
+//    UATeamClient is designed to give fast access to freshest releases on
+//    <http://uateam.ua>.
+//    Copyright (c) 2012 Andrii Titov. All rights reserved.
 //
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #import "UATReleaseInfoVC.h"
 #import "HTMLParser.h"
@@ -50,7 +64,8 @@
     HTMLNode *imgNode = [freshParser.body findChildOfClass:@"modal"];
     relDescription.imageSrc = [imgNode getAttributeNamed:@"href"];
     NSURL *imURL = [NSURL URLWithString:relDescription.imageSrc];
-    NSURLRequest *tmpRequest = [NSURLRequest requestWithURL:imURL];HTMLNode *videoNode = [freshParser.body findChildWithAttribute:@"id" matchingName:@"online_code" allowPartial:NO];
+    NSURLRequest *tmpRequest = [NSURLRequest requestWithURL:imURL];
+    HTMLNode *videoNode = [freshParser.body findChildWithAttribute:@"id" matchingName:@"online_code" allowPartial:NO];
     videoNode = [videoNode findChildWithAttribute:@"name" matchingName:@"flashvars" allowPartial:NO];
     NSString *tmpUrl = [videoNode getAttributeNamed:@"value"];
     if (tmpUrl) {

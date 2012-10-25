@@ -17,4 +17,6 @@
 
 @property (nonatomic, strong) NSArray *seasons;
 
+@property (nonatomic, strong) NSString *imageSource;
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D1AB11163912FC00BBF514 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 01D1AB10163912FC00BBF514 /* COPYING */; };
 		01D7C1B215A1B06100010CFE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D7C1B115A1B06100010CFE /* MBProgressHUD.m */; };
 		01D7C1B715A1B13900010CFE /* UATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D7C1B615A1B13900010CFE /* UATViewController.m */; };
 		9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D283815972D5900F706D0 /* UATFreshRelease.m */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D1AB10163912FC00BBF514 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = SOURCE_ROOT; };
 		01D7C1B015A1B06100010CFE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		01D7C1B115A1B06100010CFE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		01D7C1B515A1B13900010CFE /* UATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATViewController.h; path = Classes/General/UATViewController.h; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				9E0D283F15974CAA00F706D0 /* new@2x.png */,
 				9E0D284015974CAA00F706D0 /* sitcom.png */,
 				9E0D284115974CAA00F706D0 /* sitcom@2x.png */,
+				01D1AB10163912FC00BBF514 /* COPYING */,
 			);
 			name = Resources;
 			path = UATeamClient;
@@ -411,7 +414,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "uateam-app";
 			};
-			buildConfigurationList = 9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "uateamclient" */;
+			buildConfigurationList = 9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "UATeamClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -443,6 +446,7 @@
 				9E0D284715974CAA00F706D0 /* new@2x.png in Resources */,
 				9E0D284815974CAA00F706D0 /* sitcom.png in Resources */,
 				9E0D284915974CAA00F706D0 /* sitcom@2x.png in Resources */,
+				01D1AB11163912FC00BBF514 /* COPYING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +589,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "uateamclient" */ = {
+		9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "UATeamClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EAF090C1596EAD000196E9B /* Debug */,

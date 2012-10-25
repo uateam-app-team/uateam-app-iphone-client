@@ -2,9 +2,23 @@
 //  UATSitcomInfo.m
 //  UATeamClient
 //
-//  Created by Andrii Titov on 7/10/12.
-//  Copyright (c) 2012 uateam-app. All rights reserved.
+//    This file is part of UATeamClient.
+//    UATeamClient is designed to give fast access to freshest releases on
+//    <http://uateam.ua>.
+//    Copyright (c) 2012 Andrii Titov. All rights reserved.
 //
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #import "UATSitcomInfo.h"
 #import "HTMLParser.h"
@@ -16,7 +30,13 @@
 
 @end
 
-@implementation UATSitcomInfo
+@implementation UATSitcomInfo {
+    
+    UIImage *coverImage;
+    
+    NSMutableData *imageData;
+    
+}
 
 @synthesize detailsURL;
 
@@ -29,6 +49,14 @@
     }
     HTMLNode *tableNode = [freshParser.body findChildOfClass:@"adminlist"];
     sitDescription = [[UATSitcomDescription alloc] initWithHTMLNode:tableNode];
+    HTMLNode *imageNode = [[freshParser.body findChildrenWithAttribute:@"id" matchingName:@"catimage" allowPartial:NO] objectAtIndex:0];
+    sitDescription.imageSource = [imageNode getAttributeNamed:@"src"];
+    NSURL *imURL = [NSURL URLWithString:sitDescription.imageSource relativeToURL:HOME_URL];
+    NSURLRequest *tmpRequest = [NSURLRequest requestWithURL:imURL];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSURLConnection *tmpConnection = [NSURLConnection connectionWithRequest:tmpRequest delegate:self];
+        [tmpConnection start];
+    });
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -77,6 +105,26 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [[sitDescription.seasons objectAtIndex:section] seasonName];
+}
+
+#pragma mark - URL loading routine
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    imageData = [[NSMutableData alloc] initWithCapacity:[response expectedContentLength]];
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"%@",error);
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [imageData appendData:data];
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    coverImage = [UIImage imageWithData:imageData];
+    imageData = nil;
+    catImage.image = coverImage;
 }
 
 #pragma mark Segue prep
