@@ -37,6 +37,8 @@
     NSDictionary *dict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (dict) {
     }
+    UIImage *navBarImage = [UIImage imageNamed:@"navigation_bar"];
+    [[UINavigationBar appearance] setBackgroundImage:navBarImage forBarMetrics:UIBarMetricsDefault];
     return YES;
 }
 							

@@ -116,7 +116,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
+    //self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)viewDidUnload
@@ -204,6 +204,13 @@
     NSURL *_videoURL = [NSURL URLWithString:videoUrl];
     UATStreamingVC *streamer = [[UATStreamingVC alloc] initWithContentURL:_videoURL];
     [self.navigationController pushViewController:streamer animated:YES];
+}
+
+#pragma mark -
+
+-(void)setTitle:(NSString *)title {
+    [super setTitle:title];
+    navBar.topItem.title = title;
 }
 
 @end

@@ -32,6 +32,8 @@
     
     IBOutlet UITextView *releaseDescription;
     
+    IBOutlet UINavigationBar *navBar;
+    
     UATReleaseDescription *relDescription;
     
     UIImage *coverImage;

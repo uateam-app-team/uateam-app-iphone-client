@@ -77,7 +77,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
+    //self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)viewDidUnload
@@ -140,6 +140,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark -
+
+-(void)setTitle:(NSString *)title {
+    [super setTitle:title];
+    navBar.topItem.title = title;
 }
 
 @end

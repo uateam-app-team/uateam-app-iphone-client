@@ -30,6 +30,7 @@
     IBOutlet UITableView *table;
     
     IBOutlet UIImageView *catImage;
+    IBOutlet UINavigationBar *navBar;
     
 }
 
