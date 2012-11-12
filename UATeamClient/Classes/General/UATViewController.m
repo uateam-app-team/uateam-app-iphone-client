@@ -49,6 +49,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImage *backgroundIm = [UIImage imageNamed:@"background"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backgroundIm];
+    for (UIView *tv in self.view.subviews) {
+        if ([tv isKindOfClass:[UITableView class]]) {
+            tv.backgroundColor = [UIColor colorWithPatternImage:backgroundIm];
+        }
+    }
     activityView = [[MBProgressHUD alloc] initWithView:self.view];
     activityView.labelText = @"Loading";
     [self.view addSubview:activityView];

@@ -10,6 +10,8 @@
 		01D1AB11163912FC00BBF514 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 01D1AB10163912FC00BBF514 /* COPYING */; };
 		01D7C1B215A1B06100010CFE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D7C1B115A1B06100010CFE /* MBProgressHUD.m */; };
 		01D7C1B715A1B13900010CFE /* UATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D7C1B615A1B13900010CFE /* UATViewController.m */; };
+		9E0A0B471650CA1B0021C787 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A0B461650CA1B0021C787 /* background.png */; };
+		9E0A0B4A1650CA9F0021C787 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A0B491650CA9F0021C787 /* background@2x.png */; };
 		9E0D283915972D5900F706D0 /* UATFreshRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D283815972D5900F706D0 /* UATFreshRelease.m */; };
 		9E0D284215974CAA00F706D0 /* cartoon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283A15974CAA00F706D0 /* cartoon@2x.png */; };
 		9E0D284315974CAA00F706D0 /* cartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D283B15974CAA00F706D0 /* cartoon.png */; };
@@ -68,6 +70,8 @@
 		01D7C1B115A1B06100010CFE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		01D7C1B515A1B13900010CFE /* UATViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATViewController.h; path = Classes/General/UATViewController.h; sourceTree = "<group>"; };
 		01D7C1B615A1B13900010CFE /* UATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATViewController.m; path = Classes/General/UATViewController.m; sourceTree = "<group>"; };
+		9E0A0B461650CA1B0021C787 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = SOURCE_ROOT; };
+		9E0A0B491650CA9F0021C787 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Resources/background@2x.png"; sourceTree = SOURCE_ROOT; };
 		9E0D283715972D5900F706D0 /* UATFreshRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UATFreshRelease.h; path = Classes/Releases/UATFreshRelease.h; sourceTree = "<group>"; };
 		9E0D283815972D5900F706D0 /* UATFreshRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UATFreshRelease.m; path = Classes/Releases/UATFreshRelease.m; sourceTree = "<group>"; };
 		9E0D283A15974CAA00F706D0 /* cartoon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cartoon@2x.png"; path = "Resources/cartoon@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -328,6 +332,8 @@
 		9EDF76571596EF1F004995D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9E0A0B491650CA9F0021C787 /* background@2x.png */,
+				9E0A0B461650CA1B0021C787 /* background.png */,
 				9E322F1B165047F9008E50B7 /* navigation_bar@2x.png */,
 				9E322F19165047EC008E50B7 /* tab_bar@2x.png */,
 				9E322F14165046A7008E50B7 /* navigation_bar.png */,
@@ -429,7 +435,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "uateam-app";
 			};
-			buildConfigurationList = 9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "UATeamClient" */;
+			buildConfigurationList = 9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "uateamclient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -467,6 +473,8 @@
 				9E322F17165046A7008E50B7 /* tab_bar.png in Resources */,
 				9E322F1A165047EC008E50B7 /* tab_bar@2x.png in Resources */,
 				9E322F1C165047F9008E50B7 /* navigation_bar@2x.png in Resources */,
+				9E0A0B471650CA1B0021C787 /* background.png in Resources */,
+				9E0A0B4A1650CA9F0021C787 /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +617,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "UATeamClient" */ = {
+		9EAF08DF1596EAD000196E9B /* Build configuration list for PBXProject "uateamclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EAF090C1596EAD000196E9B /* Debug */,
